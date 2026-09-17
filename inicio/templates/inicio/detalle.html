@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ datos.titulo }} | Mi espacio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main class="page-shell detail-shell">
+        <a href="{% url 'inicio:inicio' %}" class="back-link">← Volver al inicio</a>
+
+        <article class="detail-card">
+            <div class="detail-heading">
+                <span class="icon" aria-hidden="true">{{ datos.icono }}</span>
+                <div>
+                    <p class="eyebrow">Categoría: {{ categoria }}</p>
+                    <h1>{{ datos.titulo }}</h1>
+                </div>
+            </div>
+
+            <p class="detail-description">{{ datos.descripcion }}</p>
+
+            {% if categoria == 'artistas' %}
+                <p class="story"><strong>Mi historia:</strong> {{ datos.historia }}</p>
+                <div class="facts">
+                    <div><span>{{ datos.campo_1_nombre }}</span><strong>{{ datos.campo_1 }}</strong></div>
+                    <div><span>{{ datos.campo_2_nombre }}</span><strong>{{ datos.campo_2 }}</strong></div>
+                </div>
+            {% elif categoria == 'series' %}
+                <p class="story"><strong>Mi historia:</strong> {{ datos.historia }}</p>
+                <div class="facts">
+                    <div><span>{{ datos.campo_1_nombre }}</span><strong>{{ datos.campo_1 }}</strong></div>
+                    <div><span>{{ datos.campo_2_nombre }}</span><strong>{{ datos.campo_2 }}</strong></div>
+                </div>
+            {% elif categoria == 'mascota' %}
+                <p class="story"><strong>Mi historia:</strong> {{ datos.historia }}</p>
+                <div class="facts">
+                    <div><span>{{ datos.campo_1_nombre }}</span><strong>{{ datos.campo_1 }}</strong></div>
+                    <div><span>{{ datos.campo_2_nombre }}</span><strong>{{ datos.campo_2 }}</strong></div>
+                </div>
+            {% elif categoria == 'libros' %}
+                <p class="story"><strong>Mi historia:</strong> {{ datos.historia }}</p>
+                <div class="facts">
+                    <div><span>{{ datos.campo_1_nombre }}</span><strong>{{ datos.campo_1 }}</strong></div>
+                    <div><span>{{ datos.campo_2_nombre }}</span><strong>{{ datos.campo_2 }}</strong></div>
+                </div>
+            {% endif %}
+        </article>
+    </main>
+</body>
+</html>

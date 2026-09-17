@@ -1,20 +1,41 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>{% block title %}frase texto{% endblock %}</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Espacio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{% url 'inicio:inicio' %}">Inicio</a></li>
-        </ul>
-    </nav>
-    {% block content %}
-    {% endblock %}
-    <footer>
-        <p>&copy; Frase 1</p>
-    </footer>
+    <div class="hero">
+        <h1>Mi Espacio Personal</h1>
+        <p>Un poco de todo lo que me gusta ✨</p>
+    </div>
+
+    <div class="grid">
+        <a href="{% url 'detalle' categoria='artistas' %}" class="card">
+            <span class="icon">🎤</span>
+            <h2>Artistas Favoritos</h2>
+            <p>Música que me define</p>
+        </a>
+        <a href="{% url 'detalle' categoria='series' %}" class="card">
+            <span class="icon">📺</span>
+            <h2>Series Favoritas</h2>
+            <p>Mis maratones favoritas</p>
+        </a>
+        <a href="{% url 'detalle' categoria='mascota' %}" class="card">
+            <span class="icon">🐾</span>
+            <h2>Mis Mascotas</h2>
+            <p>El amor de mi vida</p>
+        </a>
+        <a href="{% url 'detalle' categoria='libros' %}" class="card">
+            <span class="icon">📚</span>
+            <h2>Libros Favoritos</h2>
+            <p>Historias que amo</p>
+        </a>
+    </div>
+
+    <footer>Hecho con Django 🐍</footer>
 </body>
 </html>
