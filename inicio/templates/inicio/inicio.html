@@ -1,8 +1,48 @@
-{% extends 'base.html' %}<!-- hereda lo que esta en el file de base.html -->
-{% block title %}Página Principal{% endblock %}
-{% block content %}
-    <h1>Prueba 1</h1>
-    <p>frase 1. herencia</p>
-    <p>frase 2. herencia</p>
-{% endblock %} 
-<!-- Aca abajo no se coloca nada -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi espacio personal</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="hero">
+            <p class="eyebrow">Mi colección personal</p>
+            <h1>Un espacio para mis favoritos</h1>
+            <p>Explora las cosas que disfruto, recuerdo y recomiendo.</p>
+        </header>
+
+        <section class="grid" aria-label="Categorías favoritas">
+            <a href="{% url 'inicio:detalle' categoria='artistas' %}" class="card">
+                <span class="icon" aria-hidden="true">🎤</span>
+                <h2>Artistas Favoritos</h2>
+                <p>Música que me inspira y acompaña.</p>
+                <span class="card-link">Ver detalle <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="{% url 'inicio:detalle' categoria='series' %}" class="card">
+                <span class="icon" aria-hidden="true">📺</span>
+                <h2>Series Favoritas</h2>
+                <p>Historias para disfrutar en maratón.</p>
+                <span class="card-link">Ver detalle <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="{% url 'inicio:detalle' categoria='mascota' %}" class="card">
+                <span class="icon" aria-hidden="true">🐾</span>
+                <h2>Mi Mascota</h2>
+                <p>La compañía más fiel de mi hogar.</p>
+                <span class="card-link">Ver detalle <span aria-hidden="true">→</span></span>
+            </a>
+            <a href="{% url 'inicio:detalle' categoria='libros' %}" class="card">
+                <span class="icon" aria-hidden="true">📚</span>
+                <h2>Libros Favoritos</h2>
+                <p>Historias que me llevan a otros mundos.</p>
+                <span class="card-link">Ver detalle <span aria-hidden="true">→</span></span>
+            </a>
+        </section>
+
+        <footer>Hecho con Django</footer>
+    </main>
+</body>
+</html>
