@@ -14,22 +14,22 @@
     </div>
 
     <div class="grid">
-        <a href="{% url 'detalle' categoria='artistas' %}" class="card">
+        <a href="{% url 'inicio:detalle' categoria='artistas' %}" class="card">
             <span class="icon">🎤</span>
             <h2>Artistas Favoritos</h2>
             <p>Música que me define</p>
         </a>
-        <a href="{% url 'detalle' categoria='series' %}" class="card">
+        <a href="{% url 'inicio:detalle' categoria='series' %}" class="card">
             <span class="icon">📺</span>
             <h2>Series Favoritas</h2>
             <p>Mis maratones favoritas</p>
         </a>
-        <a href="{% url 'detalle' categoria='mascota' %}" class="card">
+        <a href="{% url 'mascota:mascota' %}" class="card">
             <span class="icon">🐾</span>
             <h2>Mis Mascotas</h2>
             <p>El amor de mi vida</p>
         </a>
-        <a href="{% url 'detalle' categoria='libros' %}" class="card">
+        <a href="{% url 'inicio:detalle' categoria='libros' %}" class="card">
             <span class="icon">📚</span>
             <h2>Libros Favoritos</h2>
             <p>Historias que amo</p>

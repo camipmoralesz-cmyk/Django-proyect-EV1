@@ -16,26 +16,26 @@
         </header>
 
         <section class="home-grid" aria-label="Categorías favoritas">
-            <article class="home-card glass-panel">
+            <a href="{% url 'inicio:detalle' categoria='artistas' %}" class="home-card glass-panel">
                 <span class="card-icon" aria-hidden="true">🎤</span>
                 <h2>Artistas Favoritos</h2>
                 <p class="muted-text">Música que me inspira.</p>
-            </article>
-            <article class="home-card glass-panel">
+            </a>
+            <a href="{% url 'inicio:detalle' categoria='series' %}" class="home-card glass-panel">
                 <span class="card-icon" aria-hidden="true">📺</span>
                 <h2>Series Favoritas</h2>
                 <p class="muted-text">Historias para disfrutar.</p>
-            </article>
-            <article class="home-card glass-panel">
+            </a>
+            <a href="{% url 'mascota:mascota' %}" class="home-card glass-panel">
                 <img class="pet-card-image" src="{% static 'img/gata.jpg' %}" alt="Mi gata">
                 <h2>Mi Mascota</h2>
                 <p class="muted-text">La compañía más fiel.</p>
-            </article>
-            <article class="home-card glass-panel">
+            </a>
+            <a href="{% url 'inicio:detalle' categoria='libros' %}" class="home-card glass-panel">
                 <span class="card-icon" aria-hidden="true">📚</span>
                 <h2>Libros Favoritos</h2>
                 <p class="muted-text">Historias que me encantan.</p>
-            </article>
+            </a>
         </section>
     </main>
 </body>
