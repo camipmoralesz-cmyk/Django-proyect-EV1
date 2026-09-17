@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Galería de mi mascota</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+	<main class="pet-page">
+		<a href="/" class="back-link">← Volver al inicio</a>
+		<header class="page-heading">
+			<p class="eyebrow">Recuerdos</p>
+			<h1>Galería de mi mascota</h1>
+		</header>
+
+		<section class="pet-gallery" aria-label="Fotos de mi mascota">
+			<article class="gallery-card glass-panel">
+				<img src="{% static 'img/gata.jpg' %}" alt="Mi gata descansando">
+				<h2>Mi gata</h2>
+				<p class="muted-text">Un momento especial para recordar.</p>
+			</article>
+			<article class="gallery-card gallery-placeholder glass-panel" aria-label="Espacio reservado para otra foto">
+				<span aria-hidden="true">🐾</span>
+				<h2>Próxima foto</h2>
+				<p class="muted-text">Aquí agregaré otro recuerdo.</p>
+			</article>
+			<article class="gallery-card gallery-placeholder glass-panel" aria-label="Espacio reservado para otra foto">
+				<span aria-hidden="true">📷</span>
+				<h2>Próxima foto</h2>
+				<p class="muted-text">Más momentos próximamente.</p>
+			</article>
+		</section>
+	</main>
+</body>
+</html>

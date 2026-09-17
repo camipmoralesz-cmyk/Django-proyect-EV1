@@ -1,8 +1,42 @@
-{% extends 'base.html' %}<!-- hereda lo que esta en el file de base.html -->
-{% block title %}Página Principal{% endblock %}
-{% block content %}
-    <h1>Prueba 1</h1>
-    <p>frase 1. herencia</p>
-    <p>frase 2. herencia</p>
-{% endblock %} 
-<!-- Aca abajo no se coloca nada -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página principal</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main class="home-page">
+        <header class="page-heading">
+            <p class="eyebrow">Mi espacio personal</p>
+            <h1>Mis favoritos</h1>
+            <p class="muted-text">Un lugar para guardar las cosas que más disfruto.</p>
+        </header>
+
+        <section class="home-grid" aria-label="Categorías favoritas">
+            <article class="home-card glass-panel">
+                <span class="card-icon" aria-hidden="true">🎤</span>
+                <h2>Artistas Favoritos</h2>
+                <p class="muted-text">Música que me inspira.</p>
+            </article>
+            <article class="home-card glass-panel">
+                <span class="card-icon" aria-hidden="true">📺</span>
+                <h2>Series Favoritas</h2>
+                <p class="muted-text">Historias para disfrutar.</p>
+            </article>
+            <article class="home-card glass-panel">
+                <img class="pet-card-image" src="{% static 'img/gata.jpg' %}" alt="Mi gata">
+                <h2>Mi Mascota</h2>
+                <p class="muted-text">La compañía más fiel.</p>
+            </article>
+            <article class="home-card glass-panel">
+                <span class="card-icon" aria-hidden="true">📚</span>
+                <h2>Libros Favoritos</h2>
+                <p class="muted-text">Historias que me encantan.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
