@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}frase texto{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'inicio:inicio' %}">Inicio</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <p>&copy; Frase 1</p>
+    </footer>
+</body>
+</html>
