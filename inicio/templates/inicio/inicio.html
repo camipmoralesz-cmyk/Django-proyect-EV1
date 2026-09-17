@@ -4,45 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi espacio personal</title>
+    <title>Página principal</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <main class="page-shell">
-        <header class="hero">
-            <p class="eyebrow">Mi colección personal</p>
-            <h1>Un espacio para mis favoritos</h1>
-            <p>Explora las cosas que disfruto, recuerdo y recomiendo.</p>
+    <main class="home-page">
+        <header class="page-heading">
+            <p class="eyebrow">Mi espacio personal</p>
+            <h1>Mis favoritos</h1>
+            <p class="muted-text">Un lugar para guardar las cosas que más disfruto.</p>
         </header>
 
-        <section class="grid" aria-label="Categorías favoritas">
-            <a href="{% url 'inicio:detalle' categoria='artistas' %}" class="card">
-                <span class="icon" aria-hidden="true">🎤</span>
+        <section class="home-grid" aria-label="Categorías favoritas">
+            <article class="home-card glass-panel">
+                <span class="card-icon" aria-hidden="true">🎤</span>
                 <h2>Artistas Favoritos</h2>
-                <p>Música que me inspira y acompaña.</p>
-                <span class="card-link">Ver detalle <span aria-hidden="true">→</span></span>
-            </a>
-            <a href="{% url 'inicio:detalle' categoria='series' %}" class="card">
-                <span class="icon" aria-hidden="true">📺</span>
+                <p class="muted-text">Música que me inspira.</p>
+            </article>
+            <article class="home-card glass-panel">
+                <span class="card-icon" aria-hidden="true">📺</span>
                 <h2>Series Favoritas</h2>
-                <p>Historias para disfrutar en maratón.</p>
-                <span class="card-link">Ver detalle <span aria-hidden="true">→</span></span>
-            </a>
-            <a href="{% url 'inicio:detalle' categoria='mascota' %}" class="card">
-                <span class="icon" aria-hidden="true">🐾</span>
+                <p class="muted-text">Historias para disfrutar.</p>
+            </article>
+            <article class="home-card glass-panel">
+                <img class="pet-card-image" src="{% static 'img/gata.jpg' %}" alt="Mi gata">
                 <h2>Mi Mascota</h2>
-                <p>La compañía más fiel de mi hogar.</p>
-                <span class="card-link">Ver detalle <span aria-hidden="true">→</span></span>
-            </a>
-            <a href="{% url 'inicio:detalle' categoria='libros' %}" class="card">
-                <span class="icon" aria-hidden="true">📚</span>
+                <p class="muted-text">La compañía más fiel.</p>
+            </article>
+            <article class="home-card glass-panel">
+                <span class="card-icon" aria-hidden="true">📚</span>
                 <h2>Libros Favoritos</h2>
-                <p>Historias que me llevan a otros mundos.</p>
-                <span class="card-link">Ver detalle <span aria-hidden="true">→</span></span>
-            </a>
+                <p class="muted-text">Historias que me encantan.</p>
+            </article>
         </section>
-
-        <footer>Hecho con Django</footer>
     </main>
 </body>
 </html>
